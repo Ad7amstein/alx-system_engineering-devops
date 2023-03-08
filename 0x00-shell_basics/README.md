@@ -21,6 +21,7 @@
    - Delete the file betty.
      - The file betty is in /tmp/my_first_directory
 9. firstdirdeletion
+   - Delete the directory my_first_directory that is in the /tmp directory
 10. back
 11. lists
 12. file_type
