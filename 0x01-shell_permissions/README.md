@@ -1,5 +1,5 @@
 # Executable files for shell premissions
-0. iam_betty
+11;rgb:0000/0000/00000. iam_betty
    - switches the current user to the user betty.
 1. who_am_i
    - prints the effective username of the current user.
@@ -33,4 +33,6 @@
     - changes the group owner to school for the file hello
 14. 100-change_owner_and_group
     -  changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.
+15. 101-symbolic_link_permissions
+    -  changes the owner and the group owner of _hello to vincent and staff respectively.
     
