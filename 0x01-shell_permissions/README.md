@@ -23,4 +23,8 @@
 9. John_Doe
    - sets the mode of the file hello to this:
      - rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
-  
+10. mirror_permissions
+11. directories_permissions
+12. directory_permissions
+13. change_group
+    - changes the group owner to school for the file hello
