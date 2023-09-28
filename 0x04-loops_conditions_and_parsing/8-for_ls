@@ -4,6 +4,9 @@
 # In a list format
 # Where only the part of the name after the first dash is displayed.
 
-content=$(find . -maxdepth 1 -type f ! -name ".*" | cut -sd '-' -f 2)
+content=$(ls)
 
-echo "$content"
+for name in $content
+do
+	echo "$name" | cut -d '-' -f 2
+done
