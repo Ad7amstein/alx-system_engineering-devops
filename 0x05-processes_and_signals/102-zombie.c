@@ -10,11 +10,11 @@
  */
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
 /**
@@ -22,7 +22,7 @@ int infinite_while(void)
  *
  * Return: Always 0
  */
-int main()
+int main(void)
 {
 	pid_t pid;
 	int i;
