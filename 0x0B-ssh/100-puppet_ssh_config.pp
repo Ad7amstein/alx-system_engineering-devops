@@ -10,7 +10,7 @@ file { '/root/.ssh':
 
 $str = "Host 342067-web-01
     HostName 3.84.237.204
-    IdentityFile /root/.ssh/school
+    IdentityFile ~/.ssh/school
     PasswordAuthentication no
 "
 
