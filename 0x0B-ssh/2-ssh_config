@@ -1,0 +1,6 @@
+# Settings for my server
+Host localhost
+    HostName localhost
+    User ubunto
+    IdentityFile ~/.ssh/school
+    PsswordAuthentication no
