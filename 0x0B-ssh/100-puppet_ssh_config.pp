@@ -14,7 +14,7 @@ $str = "Host 342067-web-01
     PasswordAuthentication no
 "
 
-file { '/root/.ssh/ssh_config':
+file { '/etc/ssh/ssh_config':
   ensure  => file,
   owner   => 'root',
   group   => 'root',
