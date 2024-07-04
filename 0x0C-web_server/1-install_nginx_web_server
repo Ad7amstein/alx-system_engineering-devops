@@ -8,7 +8,7 @@ apt-get -y update
 apt-get install -y nginx
 
 # Create an index page
-sh -c 'echo "Hello World!" >> /var/www/html/index.html'
+echo "Hello World!" > /var/www/html/index.html
 
 # Enable UFW
 ufw -y enable
