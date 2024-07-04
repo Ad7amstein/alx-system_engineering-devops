@@ -5,20 +5,10 @@
 apt-get -y update
 
 # Install nginx
-apt-get install -y nginx
+apt-get -y install nginx
 
 # Create an index page
 echo "Hello World!" > /var/www/html/index.html
-
-# Set file permissions
-chmod 644 /var/www/html/index.html
-chown www-data:ww-data /var/www/html/index.html
-
-# Enable UFW
-ufw -y enable
-
-# Allow Nginx HTTP traffic
-ufw allow 'Nginx HTTP'
 
 # Server configuration
 echo "server {
@@ -28,15 +18,7 @@ echo "server {
         root    /var/www/html;
         index   index.html index.htm;
 
-	server_name _;
-
-	location / {
-		try_files \$uri \$uri/ =404;
-	}
 }" > /etc/nginx/sites-available/default
-
-# Reload Nginx to apply configuration
-nginx -s reload
 
 # Start servic
 service nginx start
