@@ -22,3 +22,6 @@ echo "server {
 
 # Start servic
 service nginx start
+
+# Get the content
+curl localhost
