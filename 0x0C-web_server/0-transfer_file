@@ -14,8 +14,8 @@ user_name="$3"
 
 if [ $# -ge 4 ]; then
 	key_file="$4"
-	scp -o StrictHostKeyChecking=no -i $key_file -J $user_name@$ip $file $user_name@$ip:~/
+	scp -o StrictHostKeyChecking=no -i $key_file $file $user_name@$ip:~/
 else
 	# Transfer the file to the server
-	scp -o StrictHostKeyChecking=no -J $user_name@$ip $file $user_name@$ip:~/
+	scp -o StrictHostKeyChecking=no $file $user_name@$ip:~/
 fi
