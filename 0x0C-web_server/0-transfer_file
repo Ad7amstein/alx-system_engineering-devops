@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Check if the correct number of parameter passed
+if [ $# -lt 4 ]; then
+	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+	exit 1
+fi
+
+# Initialize some parameters
+file="$1"
+ip="$2"
+user_name="$3"
+key_file="$4"
+
+# Transfer the file to the server
+scp -i $key_file -J $user_name@$ip -T $file $user_name@$ip:~/
