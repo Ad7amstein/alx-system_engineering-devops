@@ -18,7 +18,22 @@ echo "server {
         root    /var/www/html;
         index   index.html index.htm;
 
+	server_name _;
+
+	location / {
+		try_files \$uri \$uri/ =404
+	}
+
 }" > /etc/nginx/sites-available/default
+
+# Allow  http
+ufw allow 'Nginx HTTP'
+
+# Enable ufw
+ufw -y enable
+
+# Reload
+nginx -s reload
 
 # Start servic
 service nginx start
