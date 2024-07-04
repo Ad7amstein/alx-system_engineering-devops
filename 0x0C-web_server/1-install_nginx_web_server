@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Configuring a new server
+
+# Update the apt packaging syste
+apt-get -y update
+
+# Install nginx
+apt-get install -y nginx
+
+# Create an index page
+sh -c 'echo "Hello World!" >> /var/www/html/index.html'
+
+# Enable UFW
+ufw -y enable
+
+# Allow Nginx HTTP traffic
+ufw allow 'Nginx HTTP'
+
+# Server configuration
+echo "server {
+        listen  80 default_server;
+        listen  [::]:80 default_server;
+
+        root    /var/www/html;
+        index   index.html;
+}" > /etc/nginx/sites-available/default
+
+# Reload Nginx to apply configuration
+nginx -s reload
+
+# Start servic
+service nginx start
